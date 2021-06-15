@@ -1,0 +1,648 @@
+@font-face {
+    font-family: 'roboto_condensedlight';
+    src: url('RobotoCondensed-Light-webfont.eot');
+    src: url('RobotoCondensed-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('RobotoCondensed-Light-webfont.woff2') format('woff2'),
+         url('RobotoCondensed-Light-webfont.woff') format('woff'),
+         url('RobotoCondensed-Light-webfont.ttf') format('truetype'),
+         url('RobotoCondensed-Light-webfont.svg#roboto_condensedlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*css commun*/
+body
+{
+	margin: 0;
+	font-family: 'Roboto', 'Times New Roman', 'Lucida Sans Unicode', sans-serif;
+	font-size: 1em;
+}
+
+header, #accueil, #nos_services, #nos_projets, #nous_contactez
+{
+	width: 100%;
+}
+
+.entete
+{
+	text-align: center;
+}
+
+h2
+{
+	text-transform: uppercase;
+	font-size: 2em;
+	font-weight: bold;
+	margin-bottom: 1px;
+}
+
+hr
+{
+	display: inline-block;
+	top: 0;
+	margin: 5px;
+	color: rgb(0, 0, 0);
+	position: relative;
+	width: 5%;
+	height: 0;
+}
+
+.fa-circle, .fa-line-chart, .fa-cubes, .fa-pie-chart, .fa-eye, .fa-caret-down
+{
+	color: rgb(92, 171, 208);
+}
+
+/*css header*/
+header
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: white;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	padding: 20px;
+	width: 100%;
+}
+
+.logo
+{
+	margin-top: 6px;
+}
+
+header ul
+{
+	list-style-type: none;
+	display: block;
+}
+
+header li
+{
+	display: inline;
+	padding: 30px 15px;
+}
+
+header a
+{
+	text-decoration: none;
+	color: black;
+}
+
+header a:hover
+{
+	border-top: 3px solid rgb(92, 171, 208);
+	padding-top: 30px;
+}
+
+/*css acceuil*/
+#accueil
+{
+	margin-bottom: -160px;
+}
+
+div#slider
+{
+	width: 100%;
+	height: 300%;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	max-width: 1600px;
+}
+
+div#slider figure
+{
+	width: 300%;
+	margin: 0;
+	position: relative;
+	text-align: left;
+	animation: 50s slidy infinite ease-in;
+}
+
+div#slider figure img
+{
+	width: 33.33%;
+	height: auto;
+	float: left;
+	margin-top: 100px;
+}
+
+@keyframes slidy
+{
+	0% { left: 0%; }
+	33.33% { left: -100%; }
+	66.66% { left: -200%; }
+	99.99% { left: -200%; }
+	100% { left: -300%; }
+}
+
+#slider_description
+{
+	position: relative;
+	width: 50%;
+	left: 5%;
+	bottom: 400px;
+	text-transform: uppercase;
+	color: white;
+}
+
+h1
+{
+	font-size: 2.5em;
+}
+
+h1 span
+{
+	color: rgb(92, 171, 208);
+	font-weight: bold;
+}
+
+.bouton_bleue
+{
+	position: absolute;
+	text-decoration: none;
+	color: white;
+	background-color: rgb(92, 171, 208);
+	width: 20%;
+	height: 34px;
+	text-align: center;
+	font-weight: bold;
+	line-height: 2.4em;
+	border-radius: 10px;
+}
+
+#slider_fleche
+{
+	position: absolute;
+	width: 100%;
+	top: 50%;
+}
+
+#gauche, #droite
+{
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.3);
+	font-size: 1.5em;
+	cursor: pointer;
+}
+
+#gauche
+{
+	padding: 19px 15px 17px 5px;
+	border-top-right-radius: 35px;
+	border-bottom-right-radius: 35px;
+}
+
+#droite
+{
+	float: right;
+	padding: 19px 5px 17px 15px;
+	border-top-left-radius: 35px;
+	border-bottom-left-radius: 35px;
+}
+
+.fa-angle-right, .fa-angle-left
+{
+	color: rgb(255, 255, 255);
+}
+
+/*css nos_services*/
+#bloc_img_comp
+{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 30px;
+}
+
+#ecran
+{
+	width: 50%;
+	margin-right: -100px;
+	margin-left: 100px;
+}
+
+#bloc_competence
+{
+	margin-right: 95px;
+	width: 50%;
+}
+
+
+.text_titre
+{
+	display: flex; 
+	margin-bottom: 30px;
+}
+
+.puce
+{
+	display: flex;
+	align-items: center;
+}
+
+.fa-line-chart, .fa-cubes, .fa-pie-chart
+{
+	border: 1px solid silver;
+	border-radius: 50%;
+	padding: 20px;
+}
+
+.point
+{
+	position: relative;
+	left: -9px;
+	margin-right: 20px;
+}
+
+/*css nos_projets*/
+#nos_projets
+{
+	background-color: rgba(229, 229, 229, 0.5);
+	padding: 5px 5px;
+}
+
+#nav_projet
+{
+	display: flex;
+	justify-content: center;
+}
+
+#nav_projet ul
+{
+	list-style-type: none;
+	display: flex;
+	padding: 0;
+	background-color: #DCDCDC;
+	border-radius: 5px;
+	margin-bottom: 60px;
+	margin-top: 30px;
+}
+
+#nav_projet li
+{
+	padding: 15px 15px;
+	cursor: pointer;
+}
+
+#nav_projet a
+{
+	text-decoration: none;
+	color: black;
+}
+
+.fa-caret-down
+{
+	position: relative;
+	opacity: 0;
+	right: 43px;
+	top: 27px;
+}
+
+#nav_projet li:hover
+{
+	background-color: rgb(92, 171, 208);
+	border-radius: 5px;
+}
+
+#nav_projet li:hover a
+{
+	color: white;
+}
+
+#nav_projet li:hover .fa-caret-down
+{
+	opacity: 1;
+}
+
+#bloc_portfelio
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+	max-width: 1360px;
+}
+
+.conteneur
+{
+	position: relative;
+	margin: 10px;
+}
+
+figcaption
+{
+	position: absolute;
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	left: 0;
+	right: 0;
+	bottom: 4px;
+	padding: 6px;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.conteneur span
+{
+	font-weight: normal;
+	text-transform: none;
+	font-size: 0.8em;
+}
+
+.fa-eye
+{
+	position: absolute;
+	left: 80%;
+	top: -28%;
+	background-color: rgb(92, 171, 208);
+	color: white;
+	border: 2px solid white;
+	border-radius: 50%;
+	padding: 10px;
+}
+
+.conteneur:hover figcaption
+{
+	opacity: 1;
+}
+
+/*css nous_contactez*/
+#nous_contactez
+{
+	position: relative;
+}
+
+iframe
+{
+	position: absolute;
+	width: 100%;
+	border: none;
+	height: 600px;
+	top: 20px;
+}
+
+#philtre
+{
+	position: relative;
+	background-color: rgb(92, 171, 208);
+	opacity: 0.3;
+	height: 600px;
+	top: 20px;
+}
+
+form
+{
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.7);
+	left: 70%;
+	bottom: 60px;
+	width: 20%;
+	height: 75%;
+}
+
+h3, #coordonnees 
+{
+	margin-left: 20px;
+	font-weight: bold;
+	font-size: 1.3em;
+	text-transform: uppercase;
+}
+
+#coordonnees
+{
+	font-weight: normal;
+	text-transform: lowercase;
+	font-size: 0.9em;
+}
+
+p span
+{
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 1.1em;
+}
+
+abbr
+{
+	text-decoration: none;
+}
+
+input, textarea
+{
+	margin: 5px 20px 5px 20px;
+	width: 80%;
+}
+
+textarea
+{
+	height: 150px;
+}
+
+input.submit
+{
+	background-color: rgb(92, 171, 208);
+	border: none;
+	border-radius: 5px;
+	color: white;
+	width: 30%;
+	height: 7%;
+}
+
+/*le responsive*/
+@media (max-width: 640px) 
+{
+	*
+	{
+		box-sizing: border-box;
+	}
+
+	body
+	{
+		width: auto;
+		margin: 0;
+		padding: 0;
+	}
+
+	img, input, textarea
+	{
+		max-width: 100%;
+	}
+
+	img
+	{
+		height: auto;
+	}
+
+	#philtre, iframe, #ecran
+	{
+		display: none !important;
+	}
+
+	/*le responsive header*/
+	.logo
+	{
+		width: 30%;
+	   	margin-bottom: 10px;
+	}
+
+	/*le responsive accueil*/
+	#slider_description
+	{
+		padding-left: 10px;
+		bottom: 220px;
+		font-size: 10px;
+	}
+
+	.bouton_bleue
+	{
+		width: 40%;
+		height: 22px;
+	}
+
+	#slider_fleche
+	{
+		top: 35%;
+	}
+
+	#gauche, #droite
+	{
+		font-size: 0.7em;
+	}
+
+	#gauche
+	{
+		top: 15px;
+	}
+
+	/*le responsive nos_services*/
+	#nos_services
+	{
+		padding-top: 5%;
+	}
+
+	#bloc_img_comp
+	{
+		display: block;
+	}
+
+	#bloc_competence
+	{
+		width: 90%;
+		border-left: 4px solid rgb(92, 171, 208);
+		padding-left: 20px;
+		margin-left: 20px;
+	}
+
+	/*le responsive nos_projets*/
+	figcaption
+	{
+		opacity: 1;
+		background-color: rgba(192, 192, 192, 0);
+	}
+
+	.fa-eye
+	{
+		visibility: hidden;
+	}
+
+	/*le responsive nous_contactez*/
+	form
+	{
+		position: static;
+		margin: 0 auto;
+		width: 50%;
+		background-color: rgba(92, 171, 208, 0.4);
+	}
+}
+
+@media (max-width: 360px) 
+{
+	/*le responsive header*/
+	header
+	{
+		display: block;
+		padding: 0;
+	}
+
+	header a:hover
+	{
+		border-top: 0px;
+	}
+
+	.logo
+	{
+		margin-top: 5px;
+	   	margin-left: 120px;
+	}
+
+	header ul
+	{
+		display: inline-flex;
+		margin: 0 auto;
+	}
+
+	header li
+	{
+		padding: 5px;
+	}
+
+	/*le responsive accueil*/
+	#slider_description
+	{
+		width: 60%;
+		padding-left: 10px;
+		bottom: 135px;
+		font-size: 7px;
+	}
+
+	.bouton_bleue
+	{
+		height: 15px;
+	}
+
+	#slider_fleche
+	{
+		top: 18%;
+	}
+
+	/*le responsive nos_services*/
+	#nos_services
+	{
+		padding-top: 15%;
+	}
+
+	/*le responsive nos_projets*/
+	#nav_projet ul
+	{
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+
+	#nav_projet li
+	{
+		padding: 5px;
+	}
+
+	.fa-caret-down
+	{
+		top: 17px;
+	}
+
+	/*le responsive nous_contactez*/
+	form
+	{
+		width: 80%;
+	}
+}
+
+@media (max-device-width:768px) and (orientation: landscape) 
+{
+  html
+  {
+   -webkit-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
+  }
+}
